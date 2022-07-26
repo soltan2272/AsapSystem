@@ -1,0 +1,45 @@
+<form [formGroup]="editPerson" (ngSubmit)="onSubmit()">
+    <div class="mb-3" style="display:none;">
+        <input type="text" formControlName="First_Name" class="form-control" name="" id="" placeholder="">
+    </div>
+    <div class="mb-3" style="display:none;">
+        <input type="text" formControlName="Last_Name" class="form-control" name="" id="" placeholder="">
+    </div>
+    <div class="mb-3">
+        <label for="fname" class="form-label">First Name</label>
+        <input type="text" formControlName="First_Name" class="form-control" name="" id="" placeholder="">
+    </div>
+    <div class="mb-3">
+        <label for="lname" class="form-label">Last Name</label>
+        <input type="text" formControlName="Last_Name" class="form-control" name="" id="" placeholder="">
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label"> email</label>
+        <input type="email" formControlName="Email" class="form-control" name="" id="" placeholder="">
+    </div>
+
+    <div class="mb-3">
+        <label for="phone" class="form-label"> Phone</label>
+        <input type="number" formControlName="Phone" class="form-control" name="" id="" placeholder="">
+    </div>
+
+    <div class="mb-3">
+        <label for="phone" class="form-label"> Country</label>
+        <input type="text" formControlName="Country" class="form-control" name="" id="" placeholder="">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label"> City</label>
+        <input type="text" formControlName="City" class="form-control" name="" id="" placeholder="">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label"> State</label>
+        <input type="text" formControlName="State" class="form-control" name="" id="" placeholder="">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label"> postal Code :</label>
+        <input type="text" formControlName="postalCode" class="form-control" name="" id="" placeholder="">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

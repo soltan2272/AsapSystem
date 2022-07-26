@@ -1,0 +1,52 @@
+
+<h1>  Person </h1>
+
+<table>
+   
+    <thead>
+      <tr>
+        <th scope="col">FIrst Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let per of person">
+        <td data-label="Account">{{per.first_Name}}</td>
+        <td data-label="Due Date">{{per.last_Name}}</td>
+        <td data-label="Amount">{{per.email}}</td>
+        <td data-label="Period">{{per.phone}}</td>
+        <td data-label="Period"><button type="button" name="" id="" class="btn btn-danger" (click)="deletePerson(per.id)"> Delete</button></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+
+  <br>
+  <hr>
+
+  <form [formGroup]="addPerson" (ngSubmit)="onSubmit()"> 
+   
+    <div class="mb-3">
+        <label for="fname"  class="form-label">First Name</label>
+        <input type="text"  formControlName="fname"  class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="lname"  class="form-label">Last Name</label>
+        <input type="text"  formControlName="lname"   class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="">
+      </div>
+
+    <div class="mb-3">
+      <label for="email"  class="form-label"> email</label>
+      <input type="email"  formControlName="email"  class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="">
+    </div>
+  
+    <div class="mb-3">
+        <label for="phone"  class="form-label"> Phone</label>
+        <input type="number"  formControlName="phone"   class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="">
+      </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

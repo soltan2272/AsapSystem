@@ -1,0 +1,80 @@
+<form [formGroup]="addPerson" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+        <label for="fname" class="form-label">First Name</label>
+        <input type="text" formControlName="First_Name" class="form-control" name="" id="" placeholder="">
+        <div *ngIf="addPerson.controls['First_Name'].invalid && (addPerson.controls['First_Name'].dirty || addPerson.controls['First_Name'].touched)" class="alert alert-danger">
+            <div *ngIf="addPerson.controls['First_Name'].errors">
+                First Name is required.
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="lname" class="form-label">Last Name</label>
+        <input type="text" formControlName="Last_Name" class="form-control" name="" id="" placeholder="">
+        <div *ngIf="addPerson.controls['Last_Name'].invalid && (addPerson.controls['Last_Name'].dirty || addPerson.controls['Last_Name'].touched)" class="alert alert-danger">
+            <div *ngIf="addPerson.controls['Last_Name'].errors">
+                Last Name is required.
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label"> email</label>
+        <input type="email" formControlName="Email" class="form-control" name="" id="" placeholder="">
+        <div *ngIf="addPerson.controls['Email'].invalid && (addPerson.controls['Email'].dirty || addPerson.controls['Email'].touched)" class="alert alert-danger">
+            <div *ngIf="addPerson.controls['Email'].errors">
+                Email is required and must be valid
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="phone" class="form-label"> Phone</label>
+        <input type="number" formControlName="Phone" class="form-control" name="" id="" placeholder="">
+        <div *ngIf="addPerson.controls['Phone'].invalid && (addPerson.controls['Phone'].dirty || addPerson.controls['Phone'].touched)" class="alert alert-danger">
+            <div *ngIf="addPerson.controls['Phone'].errors">
+                Phone is required.
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="phone" class="form-label"> Country</label>
+        <input type="text" formControlName="Country" class="form-control" name="" id="" placeholder="">
+        <div *ngIf="addPerson.controls['Country'].invalid && (addPerson.controls['Country'].dirty || addPerson.controls['Country'].touched)" class="alert alert-danger">
+            <div *ngIf="addPerson.controls['Country'].errors">
+                Country is required.
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label"> City</label>
+        <input type="text" formControlName="City" class="form-control" name="" id="" placeholder="">
+        <div *ngIf="addPerson.controls['City'].invalid && (addPerson.controls['City'].dirty || addPerson.controls['City'].touched)" class="alert alert-danger">
+            <div *ngIf="addPerson.controls['City'].errors">
+                City is required.
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label"> State</label>
+        <input type="text" formControlName="State" class="form-control" name="" id="" placeholder="">
+        <div *ngIf="addPerson.controls['State'].invalid && (addPerson.controls['State'].dirty || addPerson.controls['State'].touched)" class="alert alert-danger">
+            <div *ngIf="addPerson.controls['State'].errors">
+                State is required.
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label"> postal Code :</label>
+        <input type="text" formControlName="postalCode" class="form-control" name="" id="" placeholder="">
+        <div *ngIf="addPerson.controls['postalCode'].invalid && (addPerson.controls['postalCode'].dirty || addPerson.controls['postalCode'].touched)" class="alert alert-danger">
+            <div *ngIf="addPerson.controls['postalCode'].errors">
+                postal Code is required.
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!addPerson.valid">Add</button>
+</form>

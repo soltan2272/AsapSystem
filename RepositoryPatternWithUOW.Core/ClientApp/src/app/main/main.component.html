@@ -1,0 +1,43 @@
+<button type="button" class="btn btn-primary" routerLink="/addperson"> Add Person</button>
+<br>
+<hr>
+<table>
+
+    <thead>
+        <tr>
+            <th scope="col">FIrst Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Country</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Postal Code</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let per of person">
+            <td data-label="Account">{{per.first_Name}}</td>
+            <td data-label="Due Date">{{per.last_Name}}</td>
+            <td data-label="Amount">{{per.email}}</td>
+            <td data-label="Period">{{per.phone}}</td>
+            <td data-label="Period">{{per.country}}</td>
+            <td data-label="Period">{{per.city}}</td>
+            <td data-label="Period">{{per.state}}</td>
+            <td data-label="Period">{{per.postalCode}}</td>
+            <td data-label="Period"><button type="button" class="btn btn-success" (click)="EditPerson(per.id,per.addressID)"> Edit</button></td>
+            <td data-label="Period"><button type="button" class="btn btn-danger" (click)="deletePerson(per.id)"> Delete</button></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<br>
+
+
+
+<br>
